@@ -25,6 +25,15 @@ export const deleteProduct = async (req, res) => {
 };
 
 // Fetch all orders
+export const manageOrders = async (req, res) => {
+  try {
+    // Logic for managing orders
+    res.status(200).json({ message: 'Orders managed successfully!' });
+  } catch (err) {
+    res.status(500).json({ message: 'Error managing orders', error: err.message });
+  }
+};
+
 export const fetchOrders = async (req, res) => {
   try {
     const orders = await Order.find().populate('user', 'username email').populate('products.product');
@@ -50,6 +59,16 @@ export const updateOrderStatus = async (req, res) => {
 };
 
 // Fetch all articles
+export const manageArticles = async (req, res) => {
+  try {
+    // Add your logic for managing articles here
+    res.status(200).json({ message: 'Articles managed successfully!' });
+  } catch (err) {
+    res.status(500).json({ message: 'Error managing articles', error: err.message });
+  }
+};
+
+
 export const fetchArticles = async (req, res) => {
   try {
     const articles = await Article.find().populate('author', 'username email');
