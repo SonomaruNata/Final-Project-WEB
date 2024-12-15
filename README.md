@@ -29,8 +29,10 @@ Welcome to the **Julia Raskin Style** project! This is my final full-stack web d
 - Material-UI
 - Bootstrap
 - Axios for API integration
+## Frontend Repository
 
-https://github.com/SonomaruNata/client/tree/main/src
+[Frontend Code](https://github.com/SonomaruNata/frontEnd)
+
 
 
 ### Backend:
