@@ -1,7 +1,5 @@
 import express from 'express';
-import verifyJWT from '../middlewares/authMiddleware.js';
-
-
+import verifyJWT from '../middlewares/authMiddleware.js'; // Correct path
 
 const router = express.Router();
 
@@ -14,6 +12,5 @@ router.get('/public', (req, res) => {
 router.get('/protected', verifyJWT, (req, res) => {
   res.json({ message: 'This is a protected route', user: req.user });
 });
-
 
 export default router;
